@@ -8,7 +8,7 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
-<title>Courses | Education</title>
+<title>Clients | CodEnv</title>
 <meta name="description" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- <link rel="manifest" href="site.webmanifest"> -->
@@ -144,7 +144,7 @@
 
 	<!-- section tittle -->
 	<h1 class="title-table1">
-		<u>All Clients Details</u>
+		All Clients Details
 	</h1>
 
 
@@ -175,11 +175,12 @@
 						</a></td>
 					</tr>
 				</c:forEach>
-
+			
 			</table>
 	
 	</div>
-	</div>
+	
+	
 
 
 	<!-- img -->
@@ -214,7 +215,7 @@
 										</script>
 										All rights reserved | This Web Application is made with <i
 											class="fa fa-heart" aria-hidden="true"></i> by <a
-											href="https://colorlib.com" target="_blank">CodEnv Team</a>
+											href="" target="_blank">CodEnv Team</a>
 										<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 									</p>
 								</div>

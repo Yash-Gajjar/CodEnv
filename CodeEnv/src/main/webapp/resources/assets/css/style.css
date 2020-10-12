@@ -59,7 +59,8 @@
     text-transform: uppercase;
     cursor: pointer
 }
-/*Table style*/
+
+/*search button*/
 .btn1{
     background-color:mediumslateblue;
     
@@ -67,22 +68,13 @@
 .btn1:hover{
     opacity: 0.7;
 }
+.boxed-btn:hover {
+    background: #C86FFF;
+    color: #fff !important;
+    border: 1px solid #C86FFF
+}
 
-.btn-edit{
-    background-color: rgb(50, 47, 212);
-    
-}
-.btn-edit:hover{
-    opacity: 0.7;
-
-}
-.btn-delete{
-   background-color: rgb(21, 116, 224);
- 
-}
-.btn-delete:hover{
-    opacity: 0.7;
-}
+/* Table style  */
 
 
 table, th, td{
@@ -109,6 +101,38 @@ thead{
    border-style: double;
    
 }
+.table1{
+
+   
+    /* border-radius: 4px;*/
+
+    border-style: outset;
+    
+    margin: 50px 50px;
+    margin-bottom: 250px;
+    /*margin-top: 50px;
+    margin-bottom: 150px;
+    margin-left: 100px;
+    margin-right: 100px;*/
+    
+    
+    font-size: 15px;
+    
+    
+}
+.table2{
+    margin: 50px 50px;
+   /* margin-top: 50px;
+    margin-bottom: 150px;*/
+    margin-bottom: 250px;
+    margin-left: 500px;
+    margin-right: 500px;
+
+
+}
+
+
+
 
 
 
@@ -2844,16 +2868,18 @@ hr {
 
 @media only screen and (min-width: 1200px) and (max-width: 1600px) {
     .main-header .main-menu {
-        margin-right: 30px
+        margin-right: 10px
     }
 }
 
 .main-header .main-menu ul li {
+    
     display: inline-block;
     position: relative;
     z-index: 1;
     margin: 0 27px
 }
+
 
 @media only screen and (min-width: 1200px) and (max-width: 1600px) {
     .main-header .main-menu ul li {
@@ -2870,7 +2896,8 @@ hr {
 .main-header .main-menu ul li a {
     color: #fff;
     font-weight: 600;
-    padding: 39px 2px;
+   
+  /*  padding: 39px 2px;*/
     display: block;
     font-size: 16px;
     -webkit-transition: .3s;
@@ -2880,9 +2907,21 @@ hr {
     text-transform: capitalize
 }
 
+
+/*.main-menu */
 .main-header .main-menu ul li:hover>a {
-    color: #fff
+
+    color: black;
+    /*color: #fff*/
 }
+.main-header .main-menu ul li:active>a {
+    color: black;
+    font-style:oblique ;
+   /* background-color: rgb(16, 13, 68);*/
+
+}
+ 
+
 
 .main-header .main-menu ul ul.submenu {
     position: absolute;
@@ -2901,7 +2940,7 @@ hr {
 }
 
 .main-header .main-menu ul ul.submenu>li {
-    margin-left: 7px;
+    margin-left: 2px;
     display: block
 }
 
@@ -2918,7 +2957,7 @@ hr {
 }
 
 .button-header.margin-left {
-    margin-left: 43px !important
+    margin-left: 10px !important
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -2986,7 +3025,7 @@ hr {
 }
 
 .header-sticky.sticky-bar.sticky .main-menu ul li a {
-    padding: 20px 20px !important
+  padding: 20px 20px !important
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -4666,7 +4705,10 @@ thead{
     color: #C86FFF
 }
 
+/* footer */
+
 .footer-bottom-area .footer-border {
+    
     padding: 33px 0px 20px
     /*padding: 100px 100px 100px;*/
 }
@@ -4803,31 +4845,47 @@ thead{
     background: #000;
     background: #fff
 }
-
+/*
 .login-form .forget {
     display: block;
     margin-top: 30px;
     color: #fff;
     font-weight: 600;
     text-decoration: underline;
-    margin-bottom: 5px
+    margin-bottom: 5px;
+    text-align:left;
+}*/
+.forget{
+   
+    margin-top: 30px;
+    
+    font-weight: 600;
+    text-decoration: underline;
+    margin-bottom: 5px;
+    margin-right: 10px;
+    color: #fff;
+
 }
+/*
 
 .login-form .forget:hover {
     color: #fff
-}
+}*/
 
 .login-form .registration {
     display: block;
     color: #fff;
     font-weight: 600;
     text-decoration: underline;
-    margin-bottom: 5px
+    margin-bottom: 5px;
+    text-align: right;
 }
 
 .login-form .registration:hover {
     color: #fff
 }
+
+
 
 .home-blog-area {
     background: #f8fcff

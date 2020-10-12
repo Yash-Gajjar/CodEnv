@@ -328,7 +328,7 @@
 								<div class="topic-content-box">
 									<div class="topic-content">
 										<h3>
-											<a href="projects">Projects</a>
+											<a href="project">Projects</a>
 										</h3>
 									</div>
 								</div>
@@ -343,7 +343,7 @@
 								<div class="topic-content-box">
 									<div class="topic-content">
 										<h3>
-											<a href="clients">Clients</a>
+											<a href="allClient">Clients</a>
 										</h3>
 									</div>
 								</div>
@@ -360,7 +360,7 @@
 								<div class="topic-content-box">
 									<div class="topic-content">
 										<h3>
-											<a href="developers">Developers</a>
+											<a href="allDevelopers">Developers</a>
 										</h3>
 									</div>
 								</div>
@@ -377,7 +377,7 @@
 								<div class="topic-content-box">
 									<div class="topic-content">
 										<h3>
-											<a href="users">Users</a>
+											<a href="allUsers">Users</a>
 										</h3>
 									</div>
 								</div>
@@ -463,7 +463,7 @@
 										Copyright &copy; <> document.write(new Date() .getFullYear());
 										</> All rights reserved | This Web Application is made with <i
 											class="fa fa-heart" aria-hidden="true"></i> by <a
-											href="https://colorlib.com" target="_blank">CodEnv Team</a>
+											href="" target="_blank">CodEnv Team</a>
 										<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 									</p>
 								</div>
