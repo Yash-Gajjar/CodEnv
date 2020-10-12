@@ -85,7 +85,7 @@
 											<li><a href="allClient">Clients</a></li>
 											<li><a href="allDevelopers">Developers</a></li>
 											<li><a href="allUsers">Users</a></li>
-											<li><a href="Pro_sold_history.html">Project Sold
+											<li><a href="Pro_sold_history">Project Sold
 													History</a></li>
 											<!-- <li><a><input type="text" placeholder="search.."
 													name="search">
@@ -148,11 +148,9 @@
 	</h1>
 
 
-	
-	<div class="table1" style="width: auto;align-content: center;">
-	
-			<table>
-			
+
+	<div class="table1" style="width: auto;">
+			<table style="text-align: center;">
 				<tr>
 					<th>Name</th>
 					<th>Email</th>
@@ -169,16 +167,17 @@
 						<td>${user.clientOccupation}</td>
 						<td>${user.clientCountry}</td>
 						<td>${user.clientAbout}</td>
-						<td><a href="getClientByID/${user.clientId}"><span
-							style="color: blue;">View More</span></a></td>
-						<td><a href="deleteUserClient/${user.clientId}"><span
-								style="color: blue;">Delete</span></a></td>
-
+						<td><a href="getClientByID/${user.clientId}">
+						<img style="height: 32px;" src="<c:url value="/resources/img/viewMore.png" />" alt="">
+						</a></td>
+						<td><a href="deleteUserClient/${user.clientId}">
+						<img id="imgTrash" style="height: 32px;" src="<c:url value="/resources/img/trash.jpg" />" alt="">
+						</a></td>
 					</tr>
 				</c:forEach>
 			
 			</table>
-
+	
 	</div>
 	
 	

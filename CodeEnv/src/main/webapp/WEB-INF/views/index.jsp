@@ -257,7 +257,7 @@
 											<li><a href="allClient">Clients</a></li>
 											<li><a href="allDevelopers">Developers</a></li>
 											<li><a href="allUsers">Users</a></li>
-											<li><a href="Pro_sold_history.html">Project Sold
+											<li><a href="Pro_sold_history">Project Sold
 													History</a></li>
 											<!-- <li><a><input type="text" placeholder="search.."
 													name="search">
@@ -392,7 +392,7 @@
 								<div class="topic-content-box">
 									<div class="topic-content">
 										<h3>
-											<a href="Pro_sold_history.html">Project Sold History </a>
+											<a href="Pro_sold_history">Project Sold History </a>
 										</h3>
 									</div>
 								</div>

@@ -85,7 +85,7 @@
 											<li><a href="allClient">Clients</a></li>
 											<li><a href="allDevelopers">Developers</a></li>
 											<li><a href="allUsers">Users</a></li>
-											<li><a href="Pro_sold_history.html">Project Sold
+											<li><a href="Pro_sold_history">Project Sold
 													History</a></li>
 											
 
@@ -169,8 +169,12 @@
 						<td>${user.popTechnology}</td>
 						<td>${user.popPrice}</td>
 						<td>${user.popPayment}</td>
-						<td><a href=""><span style="color: blue;">Edit</span></a></td>
-						<td><a href="deleteProject/${user.popID}"><span style="color: blue;">Delete</span></a></td>
+						<td><a href="">
+						<img style="height: 24px;" src="<c:url value="/resources/img/edit.jpg" />" alt="">
+						</a></td>
+						<td><a href="deleteProject/${user.popID}">
+						<img id="imgTrash" style="height: 32px;" src="<c:url value="/resources/img/trash.jpg" />" alt="">
+						</a></td>
 
 					</tr>
 				</c:forEach>

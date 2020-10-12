@@ -178,10 +178,12 @@
 					<td>${user.devCountry}</td>
 					<td>${user.devAbout}</td>
 					<td>${user.devLinkedIn}</td>
-					<td><a href="getDeveloperByID/${user.devId}"><span
-							style="color: blue;">View More</span></a></td>
-					<td><a href="deleteUserDev/${user.devId}"><span
-							style="color: blue;">Delete</span></a></td>
+					<td><a href="getDeveloperByID/${user.devId}">
+					<img style="height: 32px;" src="<c:url value="/resources/img/viewMore.png" />" alt="">
+						</a></td>
+					<td><a href="deleteUserDev/${user.devId}">
+<img id="imgTrash" style="height: 32px;" src="<c:url value="/resources/img/trash.jpg" />" alt="">
+						</a></td>
 
 				</tr>
 			</c:forEach>

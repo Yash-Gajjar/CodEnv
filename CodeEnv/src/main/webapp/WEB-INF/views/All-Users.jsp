@@ -146,8 +146,7 @@
 
 
 	<div class="table1" style=" width: auto;">
-		<center>
-			<table>
+			<table style="text-align: center;">
 				<tr>
 					<th>Email ID</th>
 					<!-- <th>User Role</th> -->
@@ -158,15 +157,17 @@
 					<tr>
 						<td>${user.userEmail}</td>
 						<%-- <td>${user.userRole}</td> --%>
-						<td><a href=""> <span style="color: blue;">Edit</span></a></td>
+						<td><a href=""><img style="height: 32px;" src="<c:url value="/resources/img/viewMore.png" />" alt="">
+						</a></td>
 						<!-- <td><button class="btn-delete"><i class="fa fa-trash"></i> 	</button></td> -->
-						<td><a href="deleteUser/${user.userID}"><span
-								style="color: blue;">Delete</span></a></td>
+						<td><a href="deleteUser/${user.userID}">
+						<img id="imgTrash" style="height: 32px;" src="<c:url value="/resources/img/trash.jpg" />" alt="">
+						</a></td>
 					</tr>
 				</c:forEach>
 
 			</table>
-		</center>
+		
 	</div>
 	</div>
 
