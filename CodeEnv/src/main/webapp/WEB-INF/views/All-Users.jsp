@@ -8,10 +8,10 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
-<title>Courses | Education</title>
+<title>Users | CodEnv</title>
 <meta name="description" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- <link rel="manifest" href="site.webmanifest"> -->
+ <link rel="manifest" href="site.webmanifest"> 
 <link rel="shortcut icon" type="image/x-icon"
 	href="<c:url value="/resources/img/favicon.ico" />">
 
@@ -80,18 +80,14 @@
 								<div class="main-menu d-none d-lg-block">
 									<nav>
 										<ul id="navigation">
-											<li class="active"><a href="index.html">Home</a></li>
-											<li class="active"><a href="projects.html">Projects</a></li>
-											<li><a href="clients.html">Clients</a></li>
-											<li><a href="developers.html">Developers</a></li>
-											<li><a href="users.html">Users</a></li>
+											<li class="active"><a href="home">Home</a></li>
+											<li class="active"><a href="project">Projects</a></li>
+											<li><a href="allClient">Clients</a></li>
+											<li><a href="allDevelopers">Developers</a></li>
+											<li><a href="allUsers">Users</a></li>
 											<li><a href="Pro_sold_history.html">Project Sold
 													History</a></li>
-											<li><a><input type="text" placeholder="search.."
-													name="search">
-													<button class="btn1">
-														<i class="fa fa-search"></i>
-													</button></a></li>
+											
 
 
 
@@ -144,7 +140,7 @@
 
 	<!-- section tittle -->
 	<h1 class="title-table1">
-		<u>Guest Users Details</u>
+		Guest Users Details
 	</h1>
 
 
@@ -207,7 +203,7 @@
 										</script>
 										All rights reserved | This Web Application is made with <i
 											class="fa fa-heart" aria-hidden="true"></i> by <a
-											href="https://colorlib.com" target="_blank">CodEnv Team</a>
+											href="" target="_blank">CodEnv Team</a>
 										<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 									</p>
 								</div>

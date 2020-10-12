@@ -32,12 +32,17 @@ public class MainController {
 
 	@RequestMapping("logIn")
 	public String logIn() {
-		return "";
+		return "Login";
 	}
 
 	@RequestMapping("home")
 	public String siteHome() {
 		return "index";
+	}
+	
+	@RequestMapping("clientHome")
+	public String clientHome() {
+		return "Client-Home";
 	}
 
 	@RequestMapping("registerUser")
@@ -45,7 +50,8 @@ public class MainController {
 		model.addAttribute("user", new UserBean());
 		return "Register-User";
 	}
-
+	
+	
 	@RequestMapping("addUser")
 	public String addUser(@ModelAttribute("user") UserBean user, Model model) {
 		System.out.println("UserEmail: " + user.getUserEmail());

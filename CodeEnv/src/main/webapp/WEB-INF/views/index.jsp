@@ -252,11 +252,11 @@
 								<div class="main-menu d-none d-lg-block">
 									<nav>
 										<ul id="navigation">
-											<li class="active"><a href="index.html">Home</a></li>
-											<li class="active"><a href="projects.html">Projects</a></li>
-											<li><a href="clients.html">Clients</a></li>
-											<li><a href="developers.html">Developers</a></li>
-											<li><a href="users.html">Users</a></li>
+											<li class="active"><a href="home">Home</a></li>
+											<li class="active"><a href="project">Projects</a></li>
+											<li><a href="allClient">Clients</a></li>
+											<li><a href="allDevelopers">Developers</a></li>
+											<li><a href="allUsers">Users</a></li>
 											<li><a href="Pro_sold_history.html">Project Sold
 													History</a></li>
 											<!-- <li><a><input type="text" placeholder="search.."
@@ -328,7 +328,7 @@
 								<div class="topic-content-box">
 									<div class="topic-content">
 										<h3>
-											<a href="projects.html">Projects</a>
+											<a href="project">Projects</a>
 										</h3>
 									</div>
 								</div>
@@ -343,7 +343,7 @@
 								<div class="topic-content-box">
 									<div class="topic-content">
 										<h3>
-											<a href="clients.html">Clients</a>
+											<a href="allClient">Clients</a>
 										</h3>
 									</div>
 								</div>
@@ -360,7 +360,7 @@
 								<div class="topic-content-box">
 									<div class="topic-content">
 										<h3>
-											<a href="developers.html">Developers</a>
+											<a href="allDevelopers">Developers</a>
 										</h3>
 									</div>
 								</div>
@@ -377,7 +377,7 @@
 								<div class="topic-content-box">
 									<div class="topic-content">
 										<h3>
-											<a href="users.html">Users</a>
+											<a href="allUsers">Users</a>
 										</h3>
 									</div>
 								</div>
@@ -463,7 +463,7 @@
 										Copyright &copy; <> document.write(new Date() .getFullYear());
 										</> All rights reserved | This Web Application is made with <i
 											class="fa fa-heart" aria-hidden="true"></i> by <a
-											href="https://colorlib.com" target="_blank">CodEnv Team</a>
+											href="" target="_blank">CodEnv Team</a>
 										<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 									</p>
 								</div>

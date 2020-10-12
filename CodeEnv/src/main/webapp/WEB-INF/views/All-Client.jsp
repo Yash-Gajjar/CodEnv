@@ -8,7 +8,7 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
-<title>Courses | Education</title>
+<title>Clients | CodEnv</title>
 <meta name="description" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- <link rel="manifest" href="site.webmanifest"> -->
@@ -80,11 +80,11 @@
 								<div class="main-menu d-none d-lg-block">
 									<nav>
 										<ul id="navigation">
-											<li class="active"><a href="index.html">Home</a></li>
-											<li class="active"><a href="projects.html">Projects</a></li>
-											<li><a href="clients.html">Clients</a></li>
-											<li><a href="developers.html">Developers</a></li>
-											<li><a href="users.html">Users</a></li>
+											<li class="active"><a href="home">Home</a></li>
+											<li class="active"><a href="project">Projects</a></li>
+											<li><a href="allClient">Clients</a></li>
+											<li><a href="allDevelopers">Developers</a></li>
+											<li><a href="allUsers">Users</a></li>
 											<li><a href="Pro_sold_history.html">Project Sold
 													History</a></li>
 											<!-- <li><a><input type="text" placeholder="search.."
@@ -144,14 +144,15 @@
 
 	<!-- section tittle -->
 	<h1 class="title-table1">
-		<u>All Clients Details</u>
+		All Clients Details
 	</h1>
 
 
-
-	<div class="table1" style="width: auto;">
-		<center>
+	
+	<div class="table1" style="width: auto;align-content: center;">
+	
 			<table>
+			
 				<tr>
 					<th>Name</th>
 					<th>Email</th>
@@ -175,11 +176,12 @@
 
 					</tr>
 				</c:forEach>
-
+			
 			</table>
-		</center>
+
 	</div>
-	</div>
+	
+	
 
 
 	<!-- img -->
@@ -214,7 +216,7 @@
 										</script>
 										All rights reserved | This Web Application is made with <i
 											class="fa fa-heart" aria-hidden="true"></i> by <a
-											href="https://colorlib.com" target="_blank">CodEnv Team</a>
+											href="" target="_blank">CodEnv Team</a>
 										<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 									</p>
 								</div>
