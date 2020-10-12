@@ -6,14 +6,15 @@
 <body>
 
 	<center>
-		<h1>Welcome to DevEnv</h1>
+		<h1>Welcome to CodEnv</h1>
 	</center>
 
 	<ul>
 		<li><a href="home">Home</a>
-		<li>LogIn
+		<li><a href="Temp">Login</a>
 		<li><a href="registerUser"> RegisterUser </a>
 		<li><a href="allUsers">AllUsers</a>
+	
 		<li>RegisterDeveloper
 		<li>RegisterClient
 		<li>ProjectUpload
