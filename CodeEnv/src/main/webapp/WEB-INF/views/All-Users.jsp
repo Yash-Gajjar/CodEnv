@@ -80,11 +80,11 @@
 								<div class="main-menu d-none d-lg-block">
 									<nav>
 										<ul id="navigation">
-											<li class="active"><a href="index.html">Home</a></li>
-											<li class="active"><a href="projects.html">Projects</a></li>
-											<li><a href="clients.html">Clients</a></li>
-											<li><a href="developers.html">Developers</a></li>
-											<li><a href="users.html">Users</a></li>
+											<li class="active"><a href="home">Home</a></li>
+											<li class="active"><a href="project">Projects</a></li>
+											<li><a href="allClient">Clients</a></li>
+											<li><a href="allDevelopers">Developers</a></li>
+											<li><a href="allUsers">Users</a></li>
 											<li><a href="Pro_sold_history.html">Project Sold
 													History</a></li>
 											<li><a><input type="text" placeholder="search.."
@@ -150,8 +150,7 @@
 
 
 	<div class="table1" style=" width: auto;">
-		<center>
-			<table>
+			<table style="text-align: center;">
 				<tr>
 					<th>Email ID</th>
 					<!-- <th>User Role</th> -->
@@ -162,15 +161,17 @@
 					<tr>
 						<td>${user.userEmail}</td>
 						<%-- <td>${user.userRole}</td> --%>
-						<td><a href=""> <span style="color: blue;">Edit</span></a></td>
+						<td><a href=""><img style="height: 32px;" src="<c:url value="/resources/img/viewMore.png" />" alt="">
+						</a></td>
 						<!-- <td><button class="btn-delete"><i class="fa fa-trash"></i> 	</button></td> -->
-						<td><a href="deleteUser/${user.userID}"><span
-								style="color: blue;">Delete</span></a></td>
+						<td><a href="deleteUser/${user.userID}">
+						<img id="imgTrash" style="height: 32px;" src="<c:url value="/resources/img/trash.jpg" />" alt="">
+						</a></td>
 					</tr>
 				</c:forEach>
 
 			</table>
-		</center>
+		
 	</div>
 	</div>
 

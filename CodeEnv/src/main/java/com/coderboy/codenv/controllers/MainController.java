@@ -2,6 +2,8 @@ package com.coderboy.codenv.controllers;
 
 import java.util.List;
 
+//import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -30,16 +32,16 @@ public class MainController {
 	@Autowired
 	ProjectDAO projectDAO;
 
-	@RequestMapping("logIn")
-	public String logIn() {
-		return "";
-	}
-
 	@RequestMapping("home")
 	public String siteHome() {
 		return "index";
 	}
 
+	@RequestMapping("temp")
+	public String temp() {
+		return "Temp";
+	}
+	
 	@RequestMapping("registerUser")
 	public String registerUser(Model model) {
 		model.addAttribute("user", new UserBean());
