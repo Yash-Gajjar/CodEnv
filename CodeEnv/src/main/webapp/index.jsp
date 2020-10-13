@@ -12,10 +12,9 @@
 	<ul>
 		<li><a href="home">Home</a>
 		<li><a href="logIn">LogIn</a>
-		<li><a href="Temp">Login</a>
+		<li><a href="temp">Login</a>
 		<li><a href="registerUser"> RegisterUser </a>
 		<li><a href="allUsers">AllUsers</a>
-	
 		<li>RegisterDeveloper
 		<li>RegisterClient
 		<li>ProjectUpload
@@ -23,7 +22,7 @@
 		<li>PortfolioOfDeveloper
 		<li><a href="allDevelopers">All Developers</a>
 		<li><a href="clientHome">ClientHome</a>
-		
+		<li><a href="complains">Complains</a>
 	</ul>
 
 </body>

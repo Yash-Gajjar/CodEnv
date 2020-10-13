@@ -29,8 +29,6 @@ public class ClientDAO {
 	public List<ClientBean> getUsers() {
 		String sql = "SELECT * FROM Reg_client";
 
-//		jdbcTemplate.update(sql);
-
 		return jdbcTemplate.query(sql, new RowMapper<ClientBean>() {
 
 			public ClientBean mapRow(ResultSet rs, int rowNum) throws SQLException {

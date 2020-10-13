@@ -12,10 +12,12 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.coderboy.codenv.beans.ClientBean;
+import com.coderboy.codenv.beans.ComplainBean;
 import com.coderboy.codenv.beans.DevBean;
 import com.coderboy.codenv.beans.ProjectBean;
 import com.coderboy.codenv.beans.UserBean;
 import com.coderboy.codenv.dao.ClientDAO;
+import com.coderboy.codenv.dao.ComplainDAO;
 import com.coderboy.codenv.dao.DevDAO;
 import com.coderboy.codenv.dao.ProjectDAO;
 import com.coderboy.codenv.dao.UserDAO;
@@ -31,6 +33,8 @@ public class MainController {
 	ClientDAO clientDAO;
 	@Autowired
 	ProjectDAO projectDAO;
+	@Autowired
+	ComplainDAO complainDAO;
 
 	@RequestMapping("logIn")
 	public String logIn() {
@@ -41,7 +45,7 @@ public class MainController {
 	public String siteHome() {
 		return "index";
 	}
-	
+
 	@RequestMapping("clientHome")
 	public String clientHome() {
 		return "Client-Home";
@@ -51,14 +55,13 @@ public class MainController {
 	public String temp() {
 		return "Temp";
 	}
-	
+
 	@RequestMapping("registerUser")
 	public String registerUser(Model model) {
 		model.addAttribute("user", new UserBean());
 		return "Register-User";
 	}
-	
-	
+
 	@RequestMapping("addUser")
 	public String addUser(@ModelAttribute("user") UserBean user, Model model) {
 		System.out.println("UserEmail: " + user.getUserEmail());
@@ -72,12 +75,38 @@ public class MainController {
 		return "redirect:/";
 	}
 
+	@RequestMapping("userLogIn")
+	public String userLogIn(@ModelAttribute("user") UserBean user, Model model) {
+		System.out.println("UserEmail: " + user.getUserEmail());
+		System.out.println("UserPassword: " + user.getUserPassword());
+
+		UserBean tmpUser = userDAO.authenticateUser(user);
+
+		if (tmpUser == null)
+			System.out.println("No Such User Found!");
+
+		else
+			System.out.println("User Found!");
+
+		return "redirect:/logIn";
+	}
+
 	@RequestMapping("allUsers")
 	public String allUsers(Model model) {
 
 		List<UserBean> lstUsers = userDAO.getUsers();
 		model.addAttribute("lstUsers", lstUsers);
 		return "All-Users";
+	}
+	
+	@RequestMapping("complains")
+	public String complains(Model model) {
+		
+		List<ComplainBean> lstComplains = complainDAO.getComplains();
+		
+		model.addAttribute("complains", lstComplains);
+		
+		return "Complains";
 	}
 
 	@RequestMapping("deleteUser/{userID}")

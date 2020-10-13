@@ -13,7 +13,7 @@
 <meta name="description" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
- <link rel="manifest" href="site.webmanifest">  
+<!-- <link rel="manifest" href="site.webmanifest"> -->
 <link rel="shortcut icon" type="image/x-icon"
 	href="<c:url value="/resources/img/favicon.ico" />">
 
@@ -62,41 +62,44 @@
 	<!-- Preloader Start-->
 	<!-- Register -->
 
-	
+
 
 	<!-- <main class="login-body" data-vide-bg="<c:url value="/resources/img/login-img.png"/>"> -->
-	<main class="login-body" >
-	<img src="<c:url value="/resources/img/login-img.png"/>">
-		
+	<main class="login-body">
+		<img src="<c:url value="/resources/img/login-img.png"/>">
 
-		<form class="form-default" action="login-img.png" method="POST">
+
+		<form:form action="addUser" modelAttribute="user" class="form-default"
+			method="POST">
 
 			<div class="login-form">
-				
+
 
 				<h2>Registration Here</h2>
 
 				<div class="form-input">
 
-					<input type="email" name="email" placeholder="Email Address">
+					<input type="email" name="email" placeholder="Email Address" required="required">
 
 				</div>
 				<div class="form-input">
 
-					<input type="password" name="password" placeholder="Password">
+					<input type="password" name="password" placeholder="Password" required="required">
 				</div>
 				<div class="form-input">
 
 					<input type="password" name="password"
-						placeholder="Confirm Password">
+						placeholder="Confirm Password" required="required">
 				</div>
 				<div class="form-input pt-30">
 					<input type="submit" name="submit" value="Registration">
 				</div>
 				<!-- Forget Password -->
-				<a href="login.html" class="registration"><span style="text-align right">login </span></a>
+				<a href="login.html" class="registration"><span style="">login
+				</span></a>
 			</div>
-			<!-- 
+		</form:form>
+		<!-- 
 			<form:form class="form-default" action="addUser" modelAttribute="user" method="POST">
 			<table>
 				<tr>
@@ -115,10 +118,8 @@
 					</td>
 				</tr>
 			</table>
-		</form:form> -->
-		</form>
+		</form:form>-->
 
-		</div>
 	</main>
 
 	<!-- JS here -->

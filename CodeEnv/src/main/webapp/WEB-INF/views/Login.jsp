@@ -1,8 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+	pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@ page isELIgnored="false"%>    
+<%@ page isELIgnored="false"%>
 <!DOCTYPE html>
 <html class="no-js" lang="zxx">
 <head>
@@ -13,7 +13,7 @@
 <meta name="description" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<link rel="manifest" href="site.webmanifest">  
+<!-- <link rel="manifest" href="site.webmanifest">   -->
 <link rel="shortcut icon" type="image/x-icon"
 	href="<c:url value="/resources/img/favicon.ico" />">
 
@@ -51,63 +51,65 @@
 <body>
 
 
-<!-- ? Preloader Start -->
-    <div id="preloader-active">
-        <div class="preloader d-flex align-items-center justify-content-center">
-            <div class="preloader-inner position-relative">
-                <div class="preloader-circle"></div>
-                <div class="preloader-img pere-text">
-                    <img src="<c:url value="/resources/img/logo/loder.png" />" alt="">
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Preloader Start-->
+	<!-- ? Preloader Start -->
+	<div id="preloader-active">
+		<div
+			class="preloader d-flex align-items-center justify-content-center">
+			<div class="preloader-inner position-relative">
+				<div class="preloader-circle"></div>
+				<div class="preloader-img pere-text">
+					<img src="<c:url value="/resources/img/logo/loder.png" />" alt="">
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Preloader Start-->
 
 
-    <main class="login-body" >
-	<img src="<c:url value="/resources/img/login-img.png"/>">
-        <!-- Login Admin -->
-        <form class="form-default" action="login-img.png" method="POST">
-            
-            <div class="login-form">
-                <!-- logo-login -->
-                
-                <h2>Login Here</h2>
-                <div class="form-input">
-                  
-                    <input  type="email" name="email" placeholder="Email">
-                </div>
-                <div class="form-input">
-                    
-                    <input type="password" name="password" placeholder="Password">
-                </div>
-                <div class="form-input pt-30">
-                    <input type="submit" name="submit" value="login">
-                </div>
-            
-            
-            
-                <div class="forget">
-                <!-- Forget Password -->
-                <a href="#"><span style="padding-right: 150px;"> Forget Password</span></a>
-                
-                <!--<h1><a href="#" class="forget">Forget Password</a>-->
-           
-            
-                <!-- Forget Password -->
-               
-                
-                <a href="register.html">Registration</a>
-                <!--<a href="register.html" class="registration">Registration</a></h1>-->
-            </div>
-            </div>
-        
-        </form>
-        <!-- /end login form -->
-    </main>
+	<main class="login-body">
+		<img src="<c:url value="/resources/img/login-img.png"/>">
+		<!-- Login Admin -->
+		<form:form class="form-default" action="userLogIn" method="POST" modelAttribute="user">
 
-<!-- JS here -->
+			<div class="login-form">
+				<!-- logo-login -->
+
+				<h2>Login Here</h2>
+				<div class="form-input">
+
+					<input type="email" name="userEmail" placeholder="Email">
+				</div>
+				<div class="form-input">
+
+					<input type="password" name="userPassword" placeholder="Password">
+				</div>
+				<div class="form-input pt-30">
+					<input type="submit" name="submit" value="login">
+				</div>
+
+
+
+				<div class="forget">
+					<!-- Forget Password -->
+					<a href="#"><span style="padding-right: 150px;"> Forget
+							Password</span></a>
+
+					<!--<h1><a href="#" class="forget">Forget Password</a>-->
+
+
+					<!-- Forget Password -->
+
+
+					<a href="registerUser">Registration</a>
+					<!--<a href="register.html" class="registration">Registration</a></h1>-->
+				</div>
+			</div>
+
+		</form:form>
+		<!-- /end login form -->
+	</main>
+
+	<!-- JS here -->
 	<script
 		src="<c:url value="/resources/js/vendor/modernizr-3.5.0.min.js" />"></script>
 	<!-- Jquery, Popper, Bootstrap -->
