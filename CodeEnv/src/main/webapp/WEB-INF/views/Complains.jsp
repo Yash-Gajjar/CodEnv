@@ -27,12 +27,24 @@
 					<td>${complain.cId}</td>
 					<td>${complain.cBy}</td>
 					<td>${complain.cSubject}</td>
-					<td>${complain.cStatus}</td>
-					<td><a href="#}"> <img
+					<td><span
+						style="color: <c:choose>
+
+						<c:when test="${complain.cStatus == 'Active' }">
+						 Red
+						</c:when>
+
+						<c:otherwise>
+						black
+						</c:otherwise>
+			</c:choose>">
+
+							${complain.cStatus} </span></td>
+					<td><a href="getComplainByID/${complain.cId}"> <img
 							style="height: 32px;"
 							src="<c:url value="/resources/img/viewMore.png" />" alt="">
 					</a></td>
-					<td><a href="#"> <img
+					<td><a href="deleteComplain/${complain.cId}"> <img
 							id="imgTrash" style="height: 32px;"
 							src="<c:url value="/resources/img/trash.jpg" />" alt="">
 					</a></td>

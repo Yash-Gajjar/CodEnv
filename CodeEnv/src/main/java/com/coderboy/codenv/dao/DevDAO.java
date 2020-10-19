@@ -39,6 +39,7 @@ public class DevDAO {
 
 				DevBean user = new DevBean();
 				user.setDevId(rs.getInt("Dev_id"));
+				user.setLoginEmail(rs.getString("Login_email"));
 				user.setDevName(rs.getString("Dev_name"));
 				user.setDevOccupation(rs.getString("Dev_Occupation_of_Developer"));
 				user.setDevTechnology(rs.getString("Dev_Technology_expertise"));
@@ -74,6 +75,7 @@ public class DevDAO {
 
 				DevBean user = new DevBean();
 				user.setDevId(rs.getInt("Dev_id"));
+				user.setLoginEmail(rs.getString("Login_email"));
 				user.setDevName(rs.getString("Dev_name"));
 				user.setDevOccupation(rs.getString("Dev_Occupation_of_Developer"));
 				user.setDevTechnology(rs.getString("Dev_Technology_expertise"));

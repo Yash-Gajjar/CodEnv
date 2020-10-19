@@ -79,12 +79,12 @@
 
 				<div class="form-input">
 
-					<input type="email" name="email" placeholder="Email Address" required="required">
+					<input type="email" name="userEmail" placeholder="Email Address" required="required">
 
 				</div>
 				<div class="form-input">
 
-					<input type="password" name="password" placeholder="Password" required="required">
+					<input type="password" name="userPassword" placeholder="Password" required="required">
 				</div>
 				<div class="form-input">
 
@@ -95,7 +95,7 @@
 					<input type="submit" name="submit" value="Registration">
 				</div>
 				<!-- Forget Password -->
-				<a href="login.html" class="registration"><span style="">login
+				<a href="logIn" class="registration"><span style="">login
 				</span></a>
 			</div>
 		</form:form>
