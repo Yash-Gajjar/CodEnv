@@ -63,63 +63,67 @@
 			</div>
 		</div>
 	</div>
-	<!-- Preloader Start -->
+
+	<header>
+
 	<!-- Header Start -->
-	<div class="header-area header-transparent">
-		<div class="main-header ">
-			<div class="header-bottom  header-sticky">
-				<div class="container-fluid">
-					<div class="row align-items-center">
-						<!-- Logo -->
-						<div class="col-xl-2 col-lg-2">
-							<div class="logo">
-								<a href="index.html"><img
-									src="<c:url value="/resources/img/logo/logo.png" />" alt=""></a>
+		<div class="header-area header-transparent">
+			<div class="main-header ">
+				<div class="header-bottom  header-sticky">
+					<div class="container-fluid">
+						<div class="row align-items-center">
+							<!-- Logo -->
+							<div class="col-xl-2 col-lg-2">
+								<div class="logo">
+									<a href="clientHome"><img
+										src="<c:url value="/resources/img/logo/logo2.png" />" alt=""></a>
+								</div>
 							</div>
-						</div>
-						<div class="col-xl-10 col-lg-10">
-							<div
-								class="menu-wrapper d-flex align-items-center justify-content-end">
-								<!-- Main-menu -->
-								<div class="main-menu d-none d-lg-block">
-									<nav>
-										<ul id="navigation">
+							<div class="col-xl-10 col-lg-10">
+								<div
+									class="menu-wrapper d-flex align-items-center justify-content-end">
+									<!-- Main-menu -->
+									<div class="main-menu d-none d-lg-block">
+										<nav>
+											<ul id="navigation">
 											<li class="active"><a href="home">Home</a></li>
 											<li class="active"><a href="project">Projects</a></li>
 											<li><a href="allClient">Clients</a></li>
 											<li><a href="allDevelopers">Developers</a></li>
 											<li><a href="allUsers">Users</a></li>
-											<li><a href="Pro_sold_history.html">Project Sold
-													History</a></li>
-													
-											<!-- <li><a><input type="text" placeholder="search.."
-													name="search">
-													<button class="btn1">
-														<i class="fa fa-search"></i>
-													</button></a></li> -->
+											<li><a href="allComplaints">Complaints</a></li>
+												<!-- <li><a href="developers.html">Articles</a></li>-->
+												<!-- <li><a href="users.html">Become a Developer</a> </li>-->
+												<!--    
+                                           <li><a><input type="text" placeholder="search.." name="search"><button class="btn1"><i class="fa fa-search"></i></button></a></li> 
+                                         
+                                          -->
+
+
+												<!--Button-->
+												
 
 
 
 
-
-											<!-- Button -->
-											<!--  <li class="button-header margin-left "><a href="#" class="btn"></a></li> -->
-										</ul>
-									</nav>
+											</ul>
+										</nav>
+									</div>
 								</div>
 							</div>
-						</div>
-						<!-- Mobile Menu -->
-						<div class="col-12">
-							<div class="mobile_menu d-block d-lg-none"></div>
+							<!-- Mobile Menu -->
+							<div class="col-12">
+								<div class="mobile_menu d-block d-lg-none"></div>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-
+		<!-- Header End -->
+	</header>
 	<!-- Header End -->
+
 	<main>
 		<!--? slider Area Start-->
 		<section class="slider-area slider-area2">
@@ -152,32 +156,24 @@
 		All Developers
 	</h1>
 
+	<!-- <div class="table1" style="width: auto;"> -->
 	<div class="table1" style="width: auto;">
-	
-		 
+		 <center>
 		<table border="1" align="center">
 			<tr>
 				<th>Name</th>
+				<th>Email Id</th>
 				<th>Occupation</th>
-				<th>Technology</th>
-				<th>Experience</th>
-				<th>Payment Plan</th>
-				<th>Country</th>
-				<th>About</th>
-				<th>LinkedIn</th>
+				<th>Technology Expertise</th>
 				<th>View More</th>
 				<th>Delete</th>
 			</tr>
 			<c:forEach var="user" items="${lstUsers}">
 				<tr>
 					<td>${user.devName}</td>
+					<td>${user.loginEmail}</td>
 					<td>${user.devOccupation}</td>
 					<td>${user.devTechnology}</td>
-					<td>${user.devExperience}</td>
-					<td>${user.devPaymentPlan}</td>
-					<td>${user.devCountry}</td>
-					<td>${user.devAbout}</td>
-					<td>${user.devLinkedIn}</td>
 					<td><a href="getDeveloperByID/${user.devId}">
 					<img style="height: 32px;" src="<c:url value="/resources/img/viewMore.png" />" alt="">
 						</a></td>
@@ -189,6 +185,7 @@
 			</c:forEach>
 	
 		</table>
+		</center>
 		
 	</div>
 	<!-- </div> -->

@@ -3,15 +3,15 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ page isELIgnored="false"%>
 
-<!doctype html>
-<html class="no-js" lang="zxx">
+<!DOCTYPE html>
+<html>
 <head>
 <meta charset="utf-8">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
-<title>Users | CodEnv</title>
+<title>View-Projects | CodEnv</title>
 <meta name="description" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1">
- <link rel="manifest" href="site.webmanifest"> 
+<!-- <link rel="manifest" href="site.webmanifest"> -->
 <link rel="shortcut icon" type="image/x-icon"
 	href="<c:url value="/resources/img/favicon.ico" />">
 
@@ -59,7 +59,8 @@
 			</div>
 		</div>
 	</div>
-
+	<!-- Preloader Start -->
+	<!-- Header Start -->
 	<header>
 
 	<!-- Header Start -->
@@ -87,7 +88,8 @@
 											<li><a href="allClient">Clients</a></li>
 											<li><a href="allDevelopers">Developers</a></li>
 											<li><a href="allUsers">Users</a></li>
-											<li><a href="allComplaints">Complaints</a></li>
+											<li><a href="">Complaints</a></li>
+											
 												<!-- <li><a href="developers.html">Articles</a></li>-->
 												<!-- <li><a href="users.html">Become a Developer</a> </li>-->
 												<!--    
@@ -141,57 +143,59 @@
 			</div>
 		</section>
 	</main>
-
 	<!--? About Area-1 Start -->
 
 
+<div class="container-fluid">
+<div class="trial" " style="background-color: #6e72fc;
+background-image: linear-gradient(315deg, #6e72fc 0%, #ad1deb 74%);">
+<div class="container wrapper"  style="padding:100px 50px;">
+  <table class="table table-bordered table-hover" style="background-color: white;" cellspacing="0" width="100%">
+      <tbody>
+          <tr>
+               <th width="50%" >Pop ID:</th>
+              <td>${user.popID}</td>
+              
+          </tr>
 
-	<!-- section tittle -->
-	<h1 class="title-table1">
-		Guest Users Details
-	</h1>
+           <tr>
+               <th>Pop Title:</th>
+              <td>${user.popTitle}</td>
+          </tr>
+           <tr>
+               <th>Pop Categories:</th>
+            <td>${user.popCategory}</td>
+          </tr>
+           <tr>
+               <th>Pop Description:</th>
+              <td>${user.popDescription}</td>
+          </tr>
+           <tr>
+               <th>Pop Technology:</th>
+            <td>${user.popTechnology}</td>
+          </tr>
+           <tr>
+               <th>Pop Price:</th>
+             	<td>${user.popPrice}</td>
+          </tr>
+           <tr>
+               <th>Pop Preferred Payment:</th>
+              <td>${user.popPayment}</td>
 
-
-
-	<div class="table1" style=" width: auto;">
-		<center>
-			<table border="1" align="center">
-				<!-- <table style="text-align: center;"> -->
-				<tr>
-					<th>Email ID</th>
-					<!-- <th>User Role</th> -->
-					
-					<th>Delete</th>
-				</tr>
-				<c:forEach var="user" items="${lstUsers}">
-					<tr>
-						<td>${user.userEmail}</td>
-						<%-- <td>${user.userRole}</td> --%>
-						<%-- <td><a href=""><img style="height: 32px;" src="<c:url value="/resources/img/viewMore.png" />" alt="">
-						</a></td> --%>
-						<!-- <td><button class="btn-delete"><i class="fa fa-trash"></i> 	</button></td> -->
-						<td><a href="deleteUser/${user.userID}">
-						<img id="imgTrash" style="height: 32px;" src="<c:url value="/resources/img/trash.jpg" />" alt="">
+          </tr>
+         
+      </tbody>
+      
+   </table>
+  <td><a href="deleteUserDev/${dev.devName}">
+<img id="imgTrash" style="height: 32px; float:right;" src="<c:url value="/resources/img/trash.jpg" />" alt="">
 						</a></td>
-					</tr>
-				</c:forEach>
-
-			</table>
-			</center>
-		
-	</div>
-	</div>
-
-
-	<!-- img -->
+</div>
 
 
 
-	<!-- About Area End -->
-	<!--? top subjects Area Start -->
 
-	<!-- top subjects End -->
-	<!--? About Area-3 Start -->
+
 
 	<!-- Services End -->
 
@@ -215,7 +219,7 @@
 										</script>
 										All rights reserved | This Web Application is made with <i
 											class="fa fa-heart" aria-hidden="true"></i> by <a
-											href="" target="_blank">CodEnv Team</a>
+											href="https://colorlib.com" target="_blank">CodEnv Team</a>
 										<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 									</p>
 								</div>
@@ -225,12 +229,16 @@
 				</div>
 			</div>
 			<!-- Footer End-->
-		</div>
-	</footer>
+	</div>
+</div>
+</div>
+	</footer>	
 	<!-- Scroll Up -->
 	<div id="back-top">
 		<a title="Go to Top" href="#"> <i class="fas fa-level-up-alt"></i></a>
 	</div>
+
+
 
 	<!-- JS here -->
 	<script
@@ -277,28 +285,7 @@
 	<script src="<c:url value="/resources/js/plugins.js" />"></script>
 	<script src="<c:url value="/resources/js/main.js" />"></script>
 
+
 </body>
+
 </html>
-
-
-<!-- 
-<table border="1">
-			<tr>
-				<th>Email ID</th>
-				<th>User Role</th>
-				<th>Edit</th>
-				<th>Delete</th>
-			</tr>
-			<c:forEach var="user" items="${lstUsers}">
-				<tr>
-					<td>${user.userEmail}</td>
-					<td>${user.userRole}</td>
-					<td><a href="">Edit</a></td>
-					<td><a href="deleteUser/${user.userID}">Delete</a></td>
-				</tr>
-			</c:forEach>
-
-		</table>
-
- -->
-
