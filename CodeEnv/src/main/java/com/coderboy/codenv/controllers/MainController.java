@@ -36,21 +36,52 @@ public class MainController {
 	public String logIn() {
 		return "Login";
 	}
-
+	
+	
 	@RequestMapping("home")
 	public String siteHome() {
 		return "index";
 	}
 	
-	@RequestMapping("clientHome")
-	public String clientHome() {
-		return "Client-Home";
+	@RequestMapping("userHome")
+	public String userHome() {
+		return "User-Home";
 	}
+	
+	@RequestMapping("browseCodes")
+	public String browseCodes() {
+		return "BrowseCodes";
+	}
+	@RequestMapping("allProjects")
+	public String allProjects() {
+		return "All-Projects";
+	}
+	
+	@RequestMapping("viewProjects")
+	public String viewProjects() {
+		return "View-projects";
+	}
+	
+	@RequestMapping("allComplaints")
+	public String allComplaints() {
+		return "All-Complaints";
+	}
+	
+	@RequestMapping("viewComplaints")
+	public String viewComplaints() {
+		return "View-Complaints";
+	}
+	
+	
 
-	@RequestMapping("temp")
-	public String temp() {
-		return "Temp";
+	
+	
+	@RequestMapping("registerDeveloper")
+	public String registerDeveloper() {
+		return "Register-Developer";
 	}
+	
+	
 	
 	@RequestMapping("registerUser")
 	public String registerUser(Model model) {

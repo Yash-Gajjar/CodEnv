@@ -11,11 +11,11 @@
 <title>Projects | CodEnv</title>
 <meta name="description" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="manifest" href="site.webmanifest">
+ <link rel="manifest" href="site.webmanifest"> 
 <link rel="shortcut icon" type="image/x-icon"
 	href="<c:url value="/resources/img/favicon.ico" />">
 
-<!-- CSS here -->
+
 <%-- <c:url value="/resources/css/bootstrap.min.css" /> --%>
 <%-- <c:url value="" /> --%>
 <!-- <link rel="stylesheet" href="assets/css/bootstrap.min.css"> -->
@@ -48,7 +48,7 @@
 
 <body>
 	<!-- ? Preloader Start -->
-	<%-- 	<div id="preloader-active">
+	<!-- <div id="preloader-active">
 		<div
 			class="preloader d-flex align-items-center justify-content-center">
 			<div class="preloader-inner position-relative">
@@ -58,58 +58,66 @@
 				</div>
 			</div>
 		</div>
-	</div>
-	<!-- Preloader Start --> --%>
+	</div> -->
+
+	<header>
+
 	<!-- Header Start -->
-	<div class="header-area header-transparent">
-		<div class="main-header ">
-			<div class="header-bottom header-sticky">
-				<div class="container-fluid">
-					<div class="row align-items-center">
-						<!-- Logo -->
-						<div class="col-xl-2 col-lg-2">
-							<div class="logo">
-								<a href="index.html"><img
-									src="<c:url value="/resources/img/logo/logo.png" />" alt=""></a>
+		<div class="header-area header-transparent">
+			<div class="main-header ">
+				<div class="header-bottom  header-sticky">
+					<div class="container-fluid">
+						<div class="row align-items-center">
+							<!-- Logo -->
+							<div class="col-xl-2 col-lg-2">
+								<div class="logo">
+									<a href="clientHome"><img
+										src="<c:url value="/resources/img/logo/logo2.png" />" alt=""></a>
+								</div>
 							</div>
-						</div>
-						<div class="col-xl-10 col-lg-10">
-							<div
-								class="menu-wrapper d-flex align-items-center justify-content-end">
-								<!-- Main-menu -->
-								<div class="main-menu d-none d-lg-block">
-									<nav>
-										<ul id="navigation">
+							<div class="col-xl-10 col-lg-10">
+								<div
+									class="menu-wrapper d-flex align-items-center justify-content-end">
+									<!-- Main-menu -->
+									<div class="main-menu d-none d-lg-block">
+										<nav>
+											<ul id="navigation">
 											<li class="active"><a href="home">Home</a></li>
 											<li class="active"><a href="project">Projects</a></li>
 											<li><a href="allClient">Clients</a></li>
 											<li><a href="allDevelopers">Developers</a></li>
 											<li><a href="allUsers">Users</a></li>
-											<li><a href="Pro_sold_history">Project Sold
-													History</a></li>
-											
+											<li><a href="">Complaints</a></li>
+												<!-- <li><a href="developers.html">Articles</a></li>-->
+												<!-- <li><a href="users.html">Become a Developer</a> </li>-->
+												<!--    
+                                           <li><a><input type="text" placeholder="search.." name="search"><button class="btn1"><i class="fa fa-search"></i></button></a></li> 
+                                         
+                                          -->
+
+
+												<!--Button-->
+												
 
 
 
 
-
-											<!-- Button -->
-											<!-- <li class="button-header margin-left "><a href="#" class="btn"></a></li> -->
-										</ul>
-									</nav>
+											</ul>
+										</nav>
+									</div>
 								</div>
 							</div>
-						</div>
-						<!-- Mobile Menu -->
-						<div class="col-12">
-							<div class="mobile_menu d-block d-lg-none"></div>
+							<!-- Mobile Menu -->
+							<div class="col-12">
+								<div class="mobile_menu d-block d-lg-none"></div>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-
+		<!-- Header End -->
+	</header>
 	<!-- Header End -->
 	<main>
 		<!--? slider Area Start-->
@@ -145,9 +153,10 @@
 
 
 
-	<div class="table1" style="width: auto; table-align:center;">
+	<div class="table1" style="width: auto;">
+		<center>
 
-			<table>
+			<table border="1" align="center">
 				<tr>
 					<th>Pop ID</th>
 					<th>Pop Title</th>
@@ -157,7 +166,7 @@
 					<th>Pop price</th>
 					<th>Pop preferred payment</th>
 
-					<th>Edit</th>
+					<th>View More</th>
 					<th>Delete</th>
 				</tr>
 				<c:forEach var="user" items="${lstUsers}">
@@ -169,8 +178,8 @@
 						<td>${user.popTechnology}</td>
 						<td>${user.popPrice}</td>
 						<td>${user.popPayment}</td>
-						<td><a href="">
-						<img style="height: 24px;" src="<c:url value="/resources/img/edit.jpg" />" alt="">
+						<td><a href="viewProjects">
+						<img style="height: 32px;" src="<c:url value="/resources/img/viewMore.png" />" alt="">
 						</a></td>
 						<td><a href="deleteProject/${user.popID}">
 						<img id="imgTrash" style="height: 32px;" src="<c:url value="/resources/img/trash.jpg" />" alt="">
@@ -180,8 +189,9 @@
 				</c:forEach>
 
 			</table>
+		</center>
 	</div>
-
+	</div>
 
 
 	<!-- img -->
@@ -216,7 +226,7 @@
 										</script>
 										All rights reserved | This Web Application is made with <i
 											class="fa fa-heart" aria-hidden="true"></i> by <a
-											href="" target="_blank">CodEnv Team</a>
+											href="https://colorlib.com" target="_blank">CodEnv Team</a>
 										<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 									</p>
 								</div>
@@ -229,9 +239,7 @@
 		</div>
 	</footer>
 	<!-- Scroll Up -->
-	<div id="back-top">
-		<a title="Go to Top" href="#"> <i class="fas fa-level-up-alt"></i></a>
-	</div>
+	
 
 	<!-- JS here -->
 	<script
@@ -302,7 +310,6 @@
 </table>
 
 -->
-
 
 
 

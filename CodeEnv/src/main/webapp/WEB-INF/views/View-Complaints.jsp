@@ -8,10 +8,10 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
-<title>Users | CodEnv</title>
+<title>View-Complaints | CodEnv</title>
 <meta name="description" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1">
- <link rel="manifest" href="site.webmanifest"> 
+<!-- <link rel="manifest" href="site.webmanifest"> -->
 <link rel="shortcut icon" type="image/x-icon"
 	href="<c:url value="/resources/img/favicon.ico" />">
 
@@ -44,6 +44,7 @@
 <link rel="stylesheet"
 	href="<c:url value="/resources/css/nice-select.css" />">
 <link rel="stylesheet" href="<c:url value="/resources/css/style.css" />">
+<link rel="stylesheet" href="<c:url value="/resources/css/sidebar-browsecodes.css" />">
 </head>
 
 <body>
@@ -142,56 +143,77 @@
 		</section>
 	</main>
 
-	<!--? About Area-1 Start -->
+	
+	
+	
+<div class="container-fluid">
+<div class="trial" " style="background-color: #6e72fc;
+background-image: linear-gradient(315deg, #6e72fc 0%, #ad1deb 74%);" >
+<div class="container wrapper"  style="padding:100px 50px;">
+  <table class="table table-bordered table-hover" style="background-color: white;" cellspacing="0" width="100%">
+<!--       <thead>
+          <tr>
+              <th class="col-sm-4">Name</th>
+              <th class="col-sm-4">Position</th>
+          </tr>
+      </thead>
+ -->    
 
+		<tr>
+			<th width="30%">Complain ID:</th>
+			<td>1</td>
+		</tr>
 
+		<tr>
+			<th>Complain By:</th>
+			<td>John Rofel</td>
+		</tr>
 
-	<!-- section tittle -->
-	<h1 class="title-table1">
-		Guest Users Details
-	</h1>
+		<tr>
+			<td>Complain Subject:</td>
+			<td>${complain.cSubject}</td>
+		</tr>
 
+		<tr>
+			<td>Complain Description:</td>
+			<td>${complain.cDescription}</td>
+		</tr>
 
+		<tr>
+			<td>Complain Status:</td>
+			<td>${complain.cStatus}</td>
+		</tr>
+	</table>
+	<tr>
+			<td colspan="2">
+			
+			<%-- <a href="toggleComplain/${complain.cId}"> --%>
+			<a href="#" style="border:1px solid black; padding:5px 10px; color:black; background: linear-gradient(to bottom, #66ffff 1%, #ff99cc 100%);">
+			
+			<c:choose>
 
-	<div class="table1" style=" width: auto;">
-		<center>
-			<table border="1" align="center">
-				<!-- <table style="text-align: center;"> -->
-				<tr>
-					<th>Email ID</th>
-					<!-- <th>User Role</th> -->
-					
-					<th>Delete</th>
-				</tr>
-				<c:forEach var="user" items="${lstUsers}">
-					<tr>
-						<td>${user.userEmail}</td>
-						<%-- <td>${user.userRole}</td> --%>
-						<%-- <td><a href=""><img style="height: 32px;" src="<c:url value="/resources/img/viewMore.png" />" alt="">
-						</a></td> --%>
-						<!-- <td><button class="btn-delete"><i class="fa fa-trash"></i> 	</button></td> -->
-						<td><a href="deleteUser/${user.userID}">
-						<img id="imgTrash" style="height: 32px;" src="<c:url value="/resources/img/trash.jpg" />" alt="">
-						</a></td>
-					</tr>
-				</c:forEach>
+						<c:when test="${complain.cStatus == 'Active' }">
+						 Close Complain
+						</c:when>
 
-			</table>
-			</center>
+						<c:otherwise>
+						Active Complain
+						</c:otherwise>
+			</c:choose>
+			
+			</a>
+			</td>
+		</tr>
 		
-	</div>
-	</div>
+  <td><a href="deleteUserDev/${user.devId}">
+<img id="imgTrash" style="height: 32px;float:right;" src="<c:url value="/resources/img/trash.jpg" />" alt="">
+						</a></td>
+</div>
 
 
-	<!-- img -->
 
 
 
-	<!-- About Area End -->
-	<!--? top subjects Area Start -->
-
-	<!-- top subjects End -->
-	<!--? About Area-3 Start -->
 
 	<!-- Services End -->
 
@@ -231,6 +253,8 @@
 	<div id="back-top">
 		<a title="Go to Top" href="#"> <i class="fas fa-level-up-alt"></i></a>
 	</div>
+
+
 
 	<!-- JS here -->
 	<script
@@ -277,28 +301,7 @@
 	<script src="<c:url value="/resources/js/plugins.js" />"></script>
 	<script src="<c:url value="/resources/js/main.js" />"></script>
 
+
+
 </body>
 </html>
-
-
-<!-- 
-<table border="1">
-			<tr>
-				<th>Email ID</th>
-				<th>User Role</th>
-				<th>Edit</th>
-				<th>Delete</th>
-			</tr>
-			<c:forEach var="user" items="${lstUsers}">
-				<tr>
-					<td>${user.userEmail}</td>
-					<td>${user.userRole}</td>
-					<td><a href="">Edit</a></td>
-					<td><a href="deleteUser/${user.userID}">Delete</a></td>
-				</tr>
-			</c:forEach>
-
-		</table>
-
- -->
-

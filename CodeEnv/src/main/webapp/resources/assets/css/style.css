@@ -101,25 +101,7 @@ thead{
    border-style: double;
    
 }
-.table1{
 
-   
-    /* border-radius: 4px;*/
-
-    border-style: outset;
-    
-    margin: 50px 50px;
-    margin-bottom: 250px;
-    /*margin-top: 50px;
-    margin-bottom: 150px;
-    margin-left: 100px;
-    margin-right: 100px;*/
-    
-    
-    font-size: 15px;
-    
-    
-}
 .table2{
     margin: 50px 50px;
    /* margin-top: 50px;
@@ -139,8 +121,10 @@ thead{
 .table1{
 
     /* border-radius: 4px; */
-    border-style: outset;
-    margin: 50px 50px;
+   /* border-style: outset;*/
+   /* margin: 50px 50px;*/
+   
+   margin-top:50px;
     margin-bottom: 250px;
    /*  margin-left: 100px;
     margin-right: 100px; */
@@ -689,8 +673,8 @@ hr {
 .border-btn.border-btn2 {
     width: 100%;
     text-align: center;
-    border: 1px solid #E2E4FF;
-    color: #4255A4
+    border: 1px solid black;
+    color: purple;
 }
 
 .border-btn.border-btn2:hover {
@@ -3167,7 +3151,7 @@ hr {
 }
 
 .slider-area, .slider-area2 {
-   /* background-image: url(../img/hero/h1_hero.png);*/
+    background-image: url(../img/hero/h1_hero.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center
@@ -4292,9 +4276,11 @@ thead{
 }
 
 .courses-area .properties__img img {
+	
     width: 100%;
     border-radius: 10px 10px 0 0;
-    position: relative
+    position: relative;
+    
 }
 
 .courses-area .properties__caption {
@@ -4314,11 +4300,14 @@ thead{
 }
 
 .courses-area .properties__caption h3 a {
-    text-decoration: underline transparent
+	/* border:1px solid black; */
+	
+	color: #4255A4;
+   /*  text-decoration: underline transparent */
 }
 
 .courses-area .properties__caption h3 a:hover {
-    text-decoration: underline;
+    /* text-decoration: underline; */
     color: #4255A4
 }
 
@@ -4531,15 +4520,15 @@ thead{
     font-size: 20px;
     margin-bottom: 0px;
     text-transform: uppercase;
-    text-decoration: underline #fff transparent;
-    -webkit-transition: .4s;
+    /* text-decoration: underline #fff transparent; */
+	-webkit-transition: .4s;
     -moz-transition: .4s;
     -o-transition: .4s;
     transition: .4s
 }
 
 .topic-area .single-topic .topic-content-box .topic-content h3 a:hover {
-    text-decoration: underline
+    /* text-decoration: underline */
 }
 
 .topic-area .single-topic .topic-content-box .topic-content p {

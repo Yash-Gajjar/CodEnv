@@ -94,7 +94,7 @@
 					<input type="submit" name="submit" value="Registration">
 				</div>
 				<!-- Forget Password -->
-				<a href="login.html" class="registration"><span style="text-align right">login </span></a>
+				<a href="logIn" class="registration"><span style="text-align right">login </span></a>
 			</div>
 			<!-- 
 			<form:form class="form-default" action="addUser" modelAttribute="user" method="POST">
