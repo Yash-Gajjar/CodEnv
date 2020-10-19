@@ -78,12 +78,12 @@
 
 				<div class="form-input">
 
-					<input type="email" name="email" placeholder="Email Address">
+					<input type="email" name="userEmail" placeholder="Email Address" required="required">
 
 				</div>
 				<div class="form-input">
 
-					<input type="password" name="password" placeholder="Password">
+					<input type="password" name="userPassword" placeholder="Password" required="required">
 				</div>
 				<div class="form-input">
 
@@ -94,7 +94,8 @@
 					<input type="submit" name="submit" value="Registration">
 				</div>
 				<!-- Forget Password -->
-				<a href="logIn" class="registration"><span style="text-align right">login </span></a>
+				<a href="logIn" class="registration"><span style="">login
+				</span></a>
 			</div>
 			<!-- 
 			<form:form class="form-default" action="addUser" modelAttribute="user" method="POST">

@@ -162,26 +162,18 @@
 		<table border="1" align="center">
 			<tr>
 				<th>Name</th>
+				<th>Email Id</th>
 				<th>Occupation</th>
-				<th>Technology</th>
-				<th>Experience</th>
-				<th>Payment Plan</th>
-				<th>Country</th>
-				<th>About</th>
-				<th>LinkedIn</th>
+				<th>Technology Expertise</th>
 				<th>View More</th>
 				<th>Delete</th>
 			</tr>
 			<c:forEach var="user" items="${lstUsers}">
 				<tr>
 					<td>${user.devName}</td>
+					<td>${user.loginEmail}</td>
 					<td>${user.devOccupation}</td>
 					<td>${user.devTechnology}</td>
-					<td>${user.devExperience}</td>
-					<td>${user.devPaymentPlan}</td>
-					<td>${user.devCountry}</td>
-					<td>${user.devAbout}</td>
-					<td>${user.devLinkedIn}</td>
 					<td><a href="getDeveloperByID/${user.devId}">
 					<img style="height: 32px;" src="<c:url value="/resources/img/viewMore.png" />" alt="">
 						</a></td>

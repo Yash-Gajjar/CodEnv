@@ -2,6 +2,8 @@ package com.coderboy.codenv.controllers;
 
 import java.util.List;
 
+import javax.servlet.http.HttpSession;
+
 //import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,9 +38,8 @@ public class MainController {
 	public String logIn() {
 		return "Login";
 	}
-	
-	
-	@RequestMapping("home")
+
+	@RequestMapping("adminHome")
 	public String siteHome() {
 		return "index";
 	}
@@ -83,6 +84,28 @@ public class MainController {
 	
 	
 	
+	@RequestMapping("newComplain")
+	public String newComplain(Model model) {
+		model.addAttribute("complain", new ComplainBean());
+		return "New-Complain";
+	}
+
+	@RequestMapping("registerComplain")
+	public String registerComplain(@ModelAttribute ComplainBean complain, Model model, HttpSession session) {
+		UserBean user = (UserBean) session.getAttribute("user");
+		complain.setcBy(user.getUserEmail());
+		complain.setcStatus("Active");
+
+		System.out.println(complain.getcSubject());
+		System.out.println(complain.getcDescription());
+		System.out.println(complain.getcBy());
+		System.out.println(complain.getcStatus());
+
+		complainDAO.addComplain(complain);
+
+		return "redirect:/";
+	}
+
 	@RequestMapping("registerUser")
 	public String registerUser(Model model) {
 		model.addAttribute("user", new UserBean());
@@ -92,6 +115,7 @@ public class MainController {
 	
 	@RequestMapping("addUser")
 	public String addUser(@ModelAttribute("user") UserBean user, Model model) {
+		user.setUserRole("Guest");
 		System.out.println("UserEmail: " + user.getUserEmail());
 		System.out.println("UserPassword: " + user.getUserPassword());
 		System.out.println("UserRole: " + user.getUserRole());
@@ -103,12 +127,36 @@ public class MainController {
 		return "redirect:/";
 	}
 
+	@RequestMapping("userLogIn")
+	public String userLogIn(@ModelAttribute("user") UserBean user, Model model, HttpSession session) {
+		System.out.println("UserEmail: " + user.getUserEmail());
+		System.out.println("UserPassword: " + user.getUserPassword());
+
+		UserBean tmpUser = userDAO.authenticateUser(user);
+		session.setAttribute("user", tmpUser);
+
+		return (tmpUser.getUserRole().equals("Admin")) ? "redirect:/adminHome"
+				: (tmpUser.getUserRole().equals("Client")) ? "redirect:/clientHome" : "redirect:/userHome";
+
+//		return "redirect:/logIn";
+	}
+
 	@RequestMapping("allUsers")
 	public String allUsers(Model model) {
 
 		List<UserBean> lstUsers = userDAO.getUsers();
 		model.addAttribute("lstUsers", lstUsers);
 		return "All-Users";
+	}
+
+	@RequestMapping("complains")
+	public String complains(Model model) {
+
+		List<ComplainBean> lstComplains = complainDAO.getComplains();
+
+		model.addAttribute("complains", lstComplains);
+
+		return "Complains";
 	}
 
 	@RequestMapping("deleteUser/{userID}")
@@ -130,6 +178,12 @@ public class MainController {
 
 		clientDAO.deleteUser(userID);
 		return "redirect:/allClient";
+	}
+
+	@RequestMapping("deleteComplain/{cId}")
+	public String deleteComplain(@PathVariable("cId") int cId, Model model) {
+		complainDAO.deleteComplain(cId);
+		return "redirect:/complains";
 	}
 
 	@RequestMapping("allDevelopers")
@@ -160,6 +214,18 @@ public class MainController {
 		return "redirect:/project";
 	}
 
+	@RequestMapping("getComplainByID/toggleComplain/{cId}")
+	public String toggleComplain(@PathVariable("cId") int cId, Model model) {
+
+		ComplainBean complain = complainDAO.getComplainById(cId);
+
+		String statusToChange = (complain.getcStatus().equals("Active")) ? "Closed" : "Active";
+		complainDAO.toggleComplain(statusToChange, complain.getcId());
+		complain.setcStatus(statusToChange);
+		model.addAttribute("complain", complain);
+		return "redirect:/getComplainByID/" + cId;
+	}
+
 //	Get User's Details by ID
 	@RequestMapping("getDeveloperByID/{devId}")
 	public String getDeveloperById(@PathVariable("devId") int devId, Model model) {
@@ -173,6 +239,14 @@ public class MainController {
 		ClientBean clientBean = clientDAO.getDeveloperById(clientId);
 		model.addAttribute("client", clientBean);
 		return "View-Client";
+	}
+
+	@RequestMapping("getComplainByID/{cId}")
+	public String getComplainById(@PathVariable("cId") int cId, Model model) {
+
+		ComplainBean complain = complainDAO.getComplainById(cId);
+		model.addAttribute("complain", complain);
+		return "Detailed-Complain";
 	}
 
 }

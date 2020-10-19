@@ -287,6 +287,47 @@ background-image: linear-gradient(315deg, #6e72fc 0%, #ad1deb 74%);">
 	<script src="<c:url value="/resources/js/plugins.js" />"></script>
 	<script src="<c:url value="/resources/js/main.js" />"></script>
 
+	<table>
+
+		<tr>
+			<td>Name:</td>
+			<td>${dev.devName}</td>
+		</tr>
+		<tr>
+			<td>Email Id:</td>
+			<td>${dev.loginEmail}</td>
+		</tr>
+		<tr>
+			<td>Occupation:</td>
+			<td>${dev.devOccupation}</td>
+		</tr>
+		<tr>
+			<td>Technology Expertise:</td>
+			<td>${dev.devTechnology}</td>
+		</tr>
+		<tr>
+			<td>Experience:</td>
+			<td>${dev.devExperience}</td>
+		</tr>
+		<tr>
+			<td>Prefered Payment Plan:</td>
+			<td>${dev.devPaymentPlan}</td>
+		</tr>
+		<tr>
+			<td>Country of Residence:</td>
+			<td>${dev.devCountry}</td>
+		</tr>
+		<tr>
+			<td>About:</td>
+			<td>${dev.devAbout}</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>${dev.devLinkedIn}</td>
+		</tr>
+
+	</table>
+
 
 </body>
 
